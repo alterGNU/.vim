@@ -104,3 +104,27 @@ vnoremap ;; :s:::gic<left><left><left><left><left>
 " ========================================================================================
 " CONFIGURATION PLUGINS
 " ========================================================================================
+
+" =[ GRUVBOX ]============================================================================
+" -[ DÉCLARATION DU THÈME ]-------------------------------------------------------------
+set t_Co=256
+set background=dark
+colorscheme gruvbox
+
+" -[ FONCTION AFFICHANT LA COLONE LIMITE QUAND ELLE EXISTE ]------------------------------
+" Si textwidth est déclarée, accorde colorcolumn avec sa valeur
+" Sinon met la limite à 80 (pour 79)
+function! SetColorColumnPerFile()
+    "Récupération de la valeur de textwidth dans var-locale:textaille
+    let l:textaille = substitute(trim(execute(":set textwidth?")),"textwidth=","","")
+    if l:textaille == 0
+        setlocal colorcolumn=80
+    else
+        execute(":setlocal colorcolumn=".l:textaille)
+    endif
+endfunction
+"Lancement automatique à chaque chargement
+augroup colorcolumn
+    autocmd!
+    autocmd BufEnter * call SetColorColumnPerFile()
+augroup end
