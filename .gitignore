@@ -1,0 +1,8 @@
+#Ignorer SWAP-FILES (fichiers de sauvegarde)
+*~
+*.swo
+*.swp
+
+#Ignorer fichiers d'historique de VIM
+viminfo
+.netrwhist
