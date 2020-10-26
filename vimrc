@@ -1,7 +1,7 @@
 " ========================================================================================
 " BASIC SETUP
 " ========================================================================================
- 
+
 " -[ DÉSACTIVER LA COMPATIBILITÉ AVEC VI ]----------------------------------------------
 set nocompatible
 
@@ -32,7 +32,7 @@ set mouse=a
 
 " OPTIONNALS SETTINGS
 " ========================================================================================
- 
+
 " =[ INDENTATION ]========================================================================
 set autoindent            | " Préserve l'indentation de la ligne précédente
 set smartindent           | " Petit plus...
@@ -84,9 +84,9 @@ map ts : tab split<Space> | " Ouvre dans un nouvel onglet un fichier existant
 noremap te : tabe<Space>  | " Ouvre dans un nouvel onglet un fichier existant
 
 " =[ :SAVE ]==============================================================================
-"noremap <c-z> :update<CR>
-"vnoremap <c-z> <c-c>:update<CR>
-"inoremap <c-z> <c-o>:update<CR>
+noremap <c-u> :update<CR>
+vnoremap <c-u> <c-c>:update<CR>
+inoremap <c-u> <c-o>:update<CR>
 
 " =[ :NOHL : CTRL+N PERMET D'ARRÊTER LE SURLIGNAGE ACTIF  ]==============================
 noremap <c-n> :nohl<CR>
