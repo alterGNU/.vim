@@ -26,10 +26,16 @@ runtime! config/**/*.vim
 " -[ ACTIVATION DE LA SOURIS ]------------------------------------------------------------
 set mouse=a
 
+" ========================================================================================
+" FILETYPE CONFIGURATION
+" ========================================================================================
+filetype plugin indent on
+
 " -[ SWITCH CAPS<->ESCAP ]----------------------------------------------------------------
 "au VimEnter * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 "au VimLeave * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 
+" ========================================================================================
 " OPTIONNALS SETTINGS
 " ========================================================================================
 
@@ -61,7 +67,7 @@ set tabstop=4    	      | " Remplace la tabulation par 4 espaces
 set shiftwidth=4          | " Elimine le bud d'indentation 8espaces...
 
 " =[ LIMITATION DE LARGEUR DU TEXTE ]=====================================================
-set textwidth=90          | " Par defaut, indépendemment du filetype, largeur max = 99!
+set textwidth=120          | " Par defaut, indépendemment du filetype, largeur max = 99!
 
 " =[ RECHERCHES ET SURLIGNAGES DANS LE TEXTE ]============================================
 set incsearch             | " Active la recherche et surlignage pendant la saisie du texte
@@ -99,7 +105,6 @@ vnoremap <leader>t :sort<CR>
 " =[ SEARCH&REPLACE ]=====================================================================
 noremap ;; :%s:::gic<left><left><left><left><left>
 vnoremap ;; :s:::gic<left><left><left><left><left>
-
  
 " ========================================================================================
 " CONFIGURATION PLUGINS
