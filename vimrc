@@ -94,12 +94,12 @@ noremap <c-u> :update<CR>
 vnoremap <c-u> <c-c>:update<CR>
 inoremap <c-u> <c-o>:update<CR>
 
-" =[ :NOHL : CTRL+N PERMET D'ARRÊTER LE SURLIGNAGE ACTIF  ]==============================
+" =[ :NOHL : CTRL+N PERMET D'ARRÊTER LE SURLIGNAGE ACTIF  ]===============================
 noremap <c-n> :nohl<CR>
 vnoremap <c-n> <c-c>:nohl<CR>
 inoremap <c-n> <c-o>:nohl<CR>
 
-" =[ :SORT : CTRL+T PERMET DE TRIER L'ENSEMBLE DES LIGNES SELECTIONNÉES ]================
+" =[ :SORT : '²'+T PERMET DE TRIER L'ENSEMBLE DES LIGNES SELECTIONNÉES ]==================
 vnoremap <leader>t :sort<CR>
 
 " =[ SEARCH&REPLACE ]=====================================================================
