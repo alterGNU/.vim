@@ -1,6 +1,7 @@
 # README : VIM
 
 ## Installation
+Installation standart du dossier .vim/ dans le $HOME
 ```bash
 git clone https://github.com/alterGNU/.vim.git ~/.vim && cd ~/.vim && git submodule init && git submodule update
 ```
